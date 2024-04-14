@@ -1,0 +1,31 @@
+4. git init =>  Иницијализација на Git во директориумот во кој моментално се наоѓаме
+5. git remote add origin https://github.com/MartinJanevskii/SI_2024_lab1_226017.git
+6. git add . => ги става сите промени во staging фаза
+git commit -m "Initial commit" => commit на промените кои се во staging фаза
+7. git add .
+git commit -m "Add starter code"
+8. git push -u origin master => синхронизација на master
+9. git branch bug1
+git branch bug2 => создаваме две нови гранки од master
+10. git checkout bug1
+11. git commit -a -m "Fix wrong condition in filterOddLengthStrings" => -a автоматски прави git add на сите датотеки кои се tracked и имааат промени
+12. git checkout bug2
+13. git commit -a -m "Fix wrong condition in makeBigStringFrom"
+14 git checkout bug1
+15. git commit -a -m "Call method filterOddLengthStrings in main class"
+16. git checkout bug2
+17. git commit -a -m "Call method makeBigStringFrom in main class"
+18. git push origin --all => ги синхронизира сите гранки
+19. git checkout master
+20. git merge bug1
+21. git push origin --all
+22. git checkout bug2
+23. git rebase master => Се јавува конфликт во SILab1Main.java, го решавам конфликтот мануелно така што ги бришам линиите "<<<<<<< HEAD", "=======", ">>>>>>> e7d7a08 (Call method makeBigStringFrom in main class)"
+Потоа правиме git add . и git rebase --continue
+24. git checkout master
+25. git merge bug2
+26. git push origin --all
+27. git push --force origin --all
+28. git add .
+git commit -m "Final commit"
+29.git push --all
